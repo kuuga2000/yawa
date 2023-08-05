@@ -3,6 +3,8 @@ class Plane {
     String name;
     int age;
 
+    static int count = 20;
+
     Plane(int i, String n) {
         id = i;
         name = n;
@@ -15,7 +17,7 @@ class Plane {
     }
 
     void display() {
-        System.out.println(id + " " + name + " " + age);
+        System.out.println(id + " " + name + " " + age + " " + count);
     }
 
     public static void main(String args[]) {

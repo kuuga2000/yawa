@@ -1,10 +1,12 @@
 package com.example.scplay.repository;
 
 import com.example.scplay.model.Car;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class CarRepository implements CrudRepository<Car>{
     @Override
     public List<Car> findAll() {

@@ -2,11 +2,13 @@ package com.example.scplay.service;
 
 import com.example.scplay.model.Car;
 import com.example.scplay.repository.CarRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class CarService implements CrudService<Car> {
 
     private CarRepository repository;

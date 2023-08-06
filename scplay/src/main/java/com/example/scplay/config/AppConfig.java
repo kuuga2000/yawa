@@ -3,12 +3,14 @@ package com.example.scplay.config;
 import com.example.scplay.repository.CarRepository;
 import com.example.scplay.service.CarService;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@ComponentScan("com.example.scplay")
 public class AppConfig {
 
-    @Bean("carRepository")
+/*    @Bean("carRepository")
     public CarRepository getCarRepository() {
         return new CarRepository();
     }
@@ -16,5 +18,5 @@ public class AppConfig {
     @Bean("carService")
     public CarService getCarService() {
         return new CarService(getCarRepository());
-    }
+    }*/
 }

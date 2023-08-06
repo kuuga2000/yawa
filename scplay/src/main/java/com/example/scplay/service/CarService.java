@@ -1,6 +1,7 @@
 package com.example.scplay.service;
 
 import com.example.scplay.model.Car;
+import com.example.scplay.repository.CarRepository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,25 +9,18 @@ import java.util.Optional;
 
 public class CarService implements CrudService<Car> {
 
-    private List<Car> car;
+    private CarRepository repository;
 
     /*public CarService(List<Car> car) {
         this.car = car;
     }*/
-    public CarService() {
-        car = new ArrayList<>();
-        Car toyota = new Car(
-                1,
-                "Toyota Harrier",
-                "Toyota",
-                "Black"
-        );
-        car.add(toyota);
+    public CarService(CarRepository carRepository) {
+        this.repository = carRepository;
     }
 
     @Override
     public List<Car> list() {
-        return car;
+        return repository.findAll();
     }
 
     @Override

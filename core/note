@@ -1,0 +1,6 @@
+to run:
+javac file.java
+java file
+
+Mutable String -> Change
+Immutable String -> Unchange
